@@ -14,7 +14,11 @@ public class LoginPage extends BaseClass {
         PageFactory.initElements(driver, this);
     }
 
-    public void verifyURL() {
-        driver.getCurrentUrl();
+    public String verifyURL() {
+        return driver.getCurrentUrl();
+    }
+
+    public boolean verifyLogo() {
+        return logo.isDisplayed();
     }
 }
